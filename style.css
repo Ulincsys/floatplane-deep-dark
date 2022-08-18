@@ -1,67 +1,56 @@
-@-moz-document domain("floatplane.com")
-{
-    :root
-    {
-        --color-bg: black;
-        --color-bg-light: #2a2c2e;
-        /* #152335 */
-        --color-border: #4f555b;
-        --color-fg: #cdd5df;
-        --color-fg-dark: #adb4bc;
-        --color-link: #008eff;
-        --color-hover: #E95420;
+@-moz-document domain("floatplane.com") {
+    :root {
+      --color-bg: black;
+      --color-bg-light: #2a2c2e; /* #152335 */
+      --color-border: #4f555b;
+      --color-fg: #cdd5df;
+      --color-fg-dark: #adb4bc;
+      --color-link: #008eff;
+      --color-hover: #E95420;
     }
 
     /* Global */
     body,
     .page-wrapper .route-wrapper,
-    .video-feed-wrapper
-    {
-        background-color: var(--color-bg);
-        color: var(--color-fg);
+    .video-feed-wrapper {
+      background-color: var(--color-bg);
+      color: var(--color-fg);
     }
-
     .sidebar,
-    .sidebar .sb-hovergroup > .subscription-item > .dropup
-    {
-        background-color: var(--color-bg-light);
+    .sidebar .sb-hovergroup > .subscription-item > .dropup {
+      background-color: var(--color-bg-light);
+    }
+    .loader-wrapper,
+    .pre-loader-wrapper {
+      background-color: var(--color-bg);
+      background-image: none;
     }
 
-    .loader-wrapper,
-    .pre-loader-wrapper
-    {
-        background-color: var(--color-bg);
-        background-image: none;
+    .ProfileIntroBarWrapper .shadow-box {
+        box-shadow: none;
     }
 
     /* Logged-in home page */
-    .tabs-wrapper .nav
-    {
-        background-color: var(--color-bg-light);
-        box-shadow: none;
+    .tabs-wrapper .nav {
+      background-color: var(--color-bg-light);
+      box-shadow: none;
     }
 
     /* Browse Creators page */
     .creator-cards[class] figure[class],
-    #wrapper-part-info[id]
-    {
-        background-color: var(--color-bg-light);
+    #wrapper-part-info[id] {
+      background-color: var(--color-bg-light);
     }
-
     .creator-cards[class] figure[class] dl,
-    .creator-cards[class] figure.white[class] dl
-    {
-        background-color: var(--color-bg-light) !important;
+    .creator-cards[class] figure.white[class] dl {
+      background-color: var(--color-bg-light) !important;
     }
-
-    #part-info[id]
-    {
-        color: var(--color-fg);
+    #part-info[id] {
+      color: var(--color-fg);
     }
 
     /* Channel page */
-    .ReactProfileNavContainer .ReactProfileNavInternal
-    {
+    .ReactProfileNavContainer .ReactProfileNavInternal {
         position: relative;
         padding-left: 110px;
         font-size: 0;
@@ -70,8 +59,15 @@
         box-shadow: inset 0 -1px 0 var(--color-border);
     }
 
-    .ReactChannelStatsContainer
-    {
+    .ProfileIntroBarGeneric {
+        background-color: var(--color-bg);
+    }
+
+    .ProfileNavItem.active {
+        color: var(--color-hover);
+    }
+
+    .ReactChannelStatsContainer {
         display: flex;
         flex-direction: row;
         margin-bottom: 8px;
@@ -80,20 +76,17 @@
         background-color: var(--color-bg-light);
     }
 
-    .ReactChannelStatsContainer, .ReactCreatorPlanBoxContainer.sharp
-    {
+    .ReactChannelStatsContainer, .ReactCreatorPlanBoxContainer.sharp {
         box-shadow: inset 0 -1px 0 var(--color-border),-1px 0 0 var(--color-border),1px 0 0 var(--color-border);
     }
 
-    .ReactChannelStatsContainer > div .subs-count
-    {
+    .ReactChannelStatsContainer > div .subs-count {
         font-size: 16px;
         font-weight: 700;
         color: var(--color-fg);
     }
 
-    .ReactCreatorPlanBoxContainer
-    {
+    .ReactCreatorPlanBoxContainer {
         margin-top: 10px;
         padding: 15px 20px;
         border-radius: 2px;
@@ -101,15 +94,13 @@
         background-color: var(--color-bg-light);
     }
 
-    .ReactPlanBoxHeaderContainer .price, .ReactPlanBoxHeaderContainer .sub-count
-    {
+    .ReactPlanBoxHeaderContainer .price, .ReactPlanBoxHeaderContainer .sub-count {
         font-weight: 500;
         font-size: 12px;
         color: var(--color-fg);
     }
 
-    .ReactCreatorPlanBoxButtonsContainer .sub-button
-    {
+    .ReactCreatorPlanBoxButtonsContainer .sub-button {
         font-family: 'Proxima Nova',sans-serif;
         font-size: 13px;
         font-weight: 600;
@@ -117,18 +108,15 @@
         cursor: pointer;
     }
 
-    .ReactProfileNavContainer
-    {
+    .ReactProfileNavContainer {
         color: var(--color-fg);
     }
 
-    .ReactProfileNavItem.active
-    {
+    .ReactProfileNavItem.active {
         color: var(--color-link);
     }
 
-    .ReactChannelIntroSearch.active .SearchInput
-    {
+    .ReactChannelIntroSearch.active .SearchInput {
         box-sizing: border-box;
         padding-right: 45px;
         background: var(--color-bg);
@@ -138,8 +126,7 @@
         transition: .35s linear;
     }
 
-    .ReactProfileCover
-    {
+    .ReactProfileCover {
         pointer-events: none;
         overflow: hidden;
         opacity: 1;
@@ -150,8 +137,7 @@
         margin: 0 auto;
     }
 
-    .ReactPostTile.info-box .title
-    {
+    .ReactPostTile.info-box .title {
         max-height: 30px;
         margin-bottom: 2px;
         font-size: 13px;
@@ -161,15 +147,13 @@
         color: var(--color-fg);
     }
 
-    .ReactPostTile.info-box .media-box .duration
-    {
+    .ReactPostTile.info-box .media-box .duration {
         font-size: 10px;
         font-weight: 400;
         color: var(--color-fg);
     }
 
-    .ReactPostTile.info-box .age
-    {
+    .ReactPostTile.info-box .age {
         display: inline-block;
         margin-top: 2px;
         font-size: 10px;
@@ -178,8 +162,7 @@
         color: var(--color-fg);
     }
 
-    .ReactProfileCover::after
-    {
+    .ReactProfileCover::after {
         pointer-events: none;
         position: absolute;
         top: 0;
@@ -191,21 +174,18 @@
         content: "";
     }
 
-    .ReactProfileNavItem:hover
-    {
+    .ReactProfileNavItem:hover {
         color: var(--color-hover);
     }
 
     /* Video page */
-    .ReactDescriptionHeaderComponent .section-channel .info .channel-title
-    {
+    .ReactDescriptionHeaderComponent .section-channel .info .channel-title {
         font-size: 16px;
         font-weight: 600;
         color: var(--color-link);
     }
 
-    .ReactRelatedPostList .post-list-item .info .title
-    {
+    .ReactRelatedPostList .post-list-item .info .title {
         margin-top: 14px;
         line-height: 120%;
         font-size: 14px;
@@ -214,22 +194,23 @@
         transition: 300ms opacity;
     }
 
-    .ReactRelatedPostList .post-list-item .info .row-minor
-    {
+    .ReactRelatedPostList .post-list-item .info .row-minor {
         margin-top: 6px;
         font-size: 10px;
         color: var(--color-fg);
     }
 
-    .ReactRelatedPostList .post-list-item .info .row-minor a
-    {
+    .ReactRelatedPostList .post-list-item .info .row-minor a {
         margin-top: 6px;
         font-size: 10px;
         color: var(--color-fg);
     }
 
-    .DescriptionBodyComponent .text-container::after
-    {
+    .PostTileTitle {
+        color: var(--color-fg);
+    }
+
+    .DescriptionBodyComponent .text-container::after {
         position: absolute;
         top: 0;
         left: 0;
@@ -243,8 +224,7 @@
         transition: 2s opacity cubic-bezier(.25,1,.25,1);
     }
 
-    .ReactContentButton.variant-icon-text, .ReactContentButton.variant-text
-    {
+    .ReactContentButton.variant-icon-text, .ReactContentButton.variant-text {
         display: inline-block;
         font-family: 'Montserrat',sans-serif;
         font-weight: 700;
@@ -252,8 +232,7 @@
         transition: 400ms opacity;
     }
 
-    .ReactDescriptionHeaderComponent .video-title .title-text
-    {
+    .ReactDescriptionHeaderComponent .video-title .title-text {
         flex: 1;
         overflow-wrap: anywhere;
         user-select: text;
@@ -263,30 +242,25 @@
         color: var(--color-fg);
     }
 
-    .ReactContentButton
-    {
+    .ReactContentButton {
         color: var(--color-fg);
     }
 
-    .ReactContentButton.variant-interaction > svg *
-    {
+    .ReactContentButton.variant-interaction > svg * {
         fill: var(--color-fg);
         transition: 600ms fill;
     }
 
-    .ReactContentButton.variant-interaction.active > svg *
-    {
+    .ReactContentButton.variant-interaction.active > svg * {
         fill: var(--color-hover);
         transition: 600ms fill;
     }
 
-    .ReactContentButton.variant-interaction.active
-    {
+    .ReactContentButton.variant-interaction.active {
         color: var(--color-hover);
     }
 
-    .ReactRelatedPostList > .title
-    {
+    .ReactRelatedPostList > .title {
         margin-bottom: 20px;
         line-height: 20px;
         font-size: 20px;
@@ -294,17 +268,16 @@
         color: var(--color-fg);
     }
 
-    .CommentReplyInput textarea
-    {
+    .CommentReplyInput textarea {
         width: 100%;
         height: 36px;
         z-index: 1;
         padding: 7px 0;
         outline: 0;
         border: 0;
-        border-bottom-color: currentcolor;
-        border-bottom-style: none;
-        border-bottom-width: 0px;
+            border-bottom-color: currentcolor;
+            border-bottom-style: none;
+            border-bottom-width: 0px;
         border-bottom: 1px solid var(--color-border);
         background-color: var(--color-bg-light);
         line-height: 160%;
@@ -315,32 +288,27 @@
         resize: none;
     }
 
-    .CommentReplyInput textarea::placeholder
-    {
+    .CommentReplyInput textarea::placeholder {
         color: var(--color-fg) !important;
         opacity: 1;
     }
 
-    .player-wrapper.player-background
-    {
+    .player-wrapper.player-background {
         background: linear-gradient(to top,var(--color-bg) 0%,var(--color-bg-light) 100%);
     }
 
-    .route-wrapper
-    {
+    .route-wrapper {
         background-color: var(--color-bg) !important;
     }
 
-    .ReactCommentComponent .comment-body
-    {
+    .ReactCommentComponent .comment-body {
         line-height: 22px;
         font-size: 14px;
         font-weight: 500;
         color: var(--color-fg);
     }
 
-    .ReactCommentComponent .comment-header .author
-    {
+    .ReactCommentComponent .comment-header .author {
         font-size: 16px;
         font-weight: 700;
         color: var(--color-link);
@@ -349,8 +317,7 @@
 
     /* User profile page */
 
-    .generic-wrapper .generic-block, .generic-wrapper .generic-block-padded, .generic-wrapper .generic-block-padded-threeway
-    {
+    .generic-wrapper .generic-block, .generic-wrapper .generic-block-padded, .generic-wrapper .generic-block-padded-threeway {
         background: var(--color-bg-light);
         border: 1px solid var(--color-border);
         border-radius: 4px;
@@ -359,26 +326,22 @@
         overflow: hidden;
     }
 
-    .ReactUserProfileActivityFeed .activity-feed-period .feed-list .feed-item .item-content .content-comment
-    {
+    .ReactUserProfileActivityFeed .activity-feed-period .feed-list .feed-item .item-content .content-comment {
         color: var(--color-fg);
     }
 
-    .ReactUserProfileActivityFeed .activity-feed-period .feed-list
-    {
+    .ReactUserProfileActivityFeed .activity-feed-period .feed-list {
         color: var(--color-fg);
         font-size: 15px;
     }
 
-    .ReactUserProfileActivityFeed .activity-feed-period .feed-list .feed-item .item-caption a
-    {
+    .ReactUserProfileActivityFeed .activity-feed-period .feed-list .feed-item .item-caption a {
         cursor: pointer;
         font-weight: 500;
         color: var(--color-link);
     }
 
-    .ReactUserProfileActivityFeed .activity-feed-period .feed-title
-    {
+    .ReactUserProfileActivityFeed .activity-feed-period .feed-title {
         font-family: "Roboto";
         font-weight: 500;
         font-size: 15px;
@@ -388,34 +351,26 @@
 
     /* Settings page */
     .settings-layout-left .navlist,
-    .settings-layout-left .navlist > .navlist-item:not(:first-of-type)
-    {
-        background-color: var(--color-bg-light);
-        border-color: var(--color-border);
+    .settings-layout-left .navlist > .navlist-item:not(:first-of-type) {
+      background-color: var(--color-bg-light);
+      border-color: var(--color-border);
     }
-
     .cms-layout .cms-pane, .cms-layout .settings-pane,
-    .settings-layout-right .settings-pane
-    {
-        background-color: var(--color-bg-light);
-        border-color: var(--color-border);
+    .settings-layout-right .settings-pane {
+      background-color: var(--color-bg-light);
+      border-color: var(--color-border);
     }
-
     .cms-layout .cms-pane .col-section > .row-section,
     .cms-layout .settings-pane .col-section > .row-section,
     .settings-layout-right .settings-pane .col-section > .row-section,
     .cms-layout .cms-pane .col-section,
     .cms-layout .settings-pane .col-section,
-    .settings-layout-right .settings-pane .col-section
-    {
-        border-color: var(--color-border);
+    .settings-layout-right .settings-pane .col-section {
+      border-color: var(--color-border);
     }
-
-    .stats-group > .stat-item:not(:first-of-type)
-    {
-        border-color: var(--color-border) !important;
+    .stats-group > .stat-item:not(:first-of-type) {
+      border-color: var(--color-border) !important;
     }
-
     .cms-layout .cms-pane .input-group textarea,
     .cms-layout .cms-pane .input-group > input,
     .cms-layout .settings-pane .input-group textarea,
@@ -427,16 +382,18 @@
     .cms-layout .settings-pane .dropdown-container > select,
     .cms-layout .settings-pane .input-group > select,
     .settings-layout-right .settings-pane .dropdown-container > select,
-    .settings-layout-right .settings-pane .input-group > select
-    {
-        background-color: var(--color-bg-light);
-        border-color: var(--color-border);
-        color: var(--color-fg);
+    .settings-layout-right .settings-pane .input-group > select {
+      background-color: var(--color-bg-light);
+      border-color: var(--color-border);
+      color: var(--color-fg);
     }
 
-    .cms-layout .cms-pane .vertical-list.alternate-rows .list-item:nth-child(2n), .cms-layout .settings-pane .vertical-list.alternate-rows .list-item:nth-child(2n), .settings-layout-right .settings-pane .vertical-list.alternate-rows .list-item:nth-child(2n)
-    {
+    .cms-layout .cms-pane .vertical-list.alternate-rows .list-item:nth-child(2n), .cms-layout .settings-pane .vertical-list.alternate-rows .list-item:nth-child(2n), .settings-layout-right .settings-pane .vertical-list.alternate-rows .list-item:nth-child(2n) {
         background: var(--color-bg-light);
+    }
+
+    .cms-layout .cms-pane .col-section > .row-section p, .cms-layout .settings-pane .col-section > .row-section p, .settings-layout-right .settings-pane .col-section > .row-section p {
+        color: var(--color-fg-dark);
     }
 
     .cms-layout .cms-pane .input-group .custom-text + label,
@@ -453,56 +410,43 @@
     .settings-layout-right .settings-pane .input-group > input + label,
     .cms-layout .cms-pane .col-section > .row-section > .row-title.subtitle,
     .cms-layout .settings-pane .col-section > .row-section > .row-title.subtitle,
-    .settings-layout-right .settings-pane .col-section > .row-section > .row-title.subtitle
-    {
-        color: var(--color-fg);
+    .settings-layout-right .settings-pane .col-section > .row-section > .row-title.subtitle {
+      color: var(--color-fg);
     }
-
     .settings-general .username,
-    .stats-group > .stat-item > .value
-    {
-        color: var(--color-fg) !important;
+    .stats-group > .stat-item > .value {
+      color: var(--color-fg) !important;
     }
-
     .cms-layout .cms-pane .col-section.darker,
     .cms-layout .settings-pane .col-section.darker,
     .settings-layout-right .settings-pane .col-section.darker,
-    .white-background[class]
-    {
-        background-color: var(--color-bg-light);
+    .white-background[class] {
+      background-color: var(--color-bg-light);
     }
-
     .cms-layout .cms-pane .col-section > .row-section p.light,
     .cms-layout .settings-pane .col-section > .row-section p.light,
     .settings-layout-right .settings-pane .col-section > .row-section p.light,
     .cms-layout .cms-pane .col-section > .row-section,
     .cms-layout .settings-pane .col-section > .row-section,
-    .settings-layout-right .settings-pane .col-section > .row-section
-    {
-        color: var(--color-fg);
+    .settings-layout-right .settings-pane .col-section > .row-section {
+      color: var(--color-fg);
     }
-
     .cms-layout .cms-pane .vertical-list .list-item > .list-button.refresh,
     .cms-layout .cms-pane .vertical-list .list-item > .list-button.remove,
     .cms-layout .settings-pane .vertical-list .list-item > .list-button.refresh,
     .cms-layout .settings-pane .vertical-list .list-item > .list-button.remove,
     .settings-layout-right .settings-pane .vertical-list .list-item > .list-button.refresh,
-    .settings-layout-right .settings-pane .vertical-list .list-item > .list-button.remove
-    {
-        background-color: var(--color-bg);
+    .settings-layout-right .settings-pane .vertical-list .list-item > .list-button.remove {
+      background-color: var(--color-bg);
     }
-
-    .warning-section[class]
-    {
-        background-color: #635015;
-        border-color: #a28633;
-        color: #f5f5f5;
+    .warning-section[class] {
+      background-color: #635015;
+      border-color: #a28633;
+      color: #f5f5f5;
     }
-
-    .warning-section[class] a[href]
-    {
-        color: var(--color-fg);
-        text-decoration: underline;
+    .warning-section[class] a[href] {
+      color: var(--color-fg);
+      text-decoration: underline;
     }
 
     /* General fixes, not dark theme-specific */
@@ -538,37 +482,28 @@
     .cms-layout .cms-pane .col-section > .row-section p.light,
     .cms-layout .settings-pane .col-section > .row-section p.light,
     .settings-layout-right .settings-pane .col-section > .row-section p.light,
-    [class] .pure-table td
-    {
-        font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    [class] .pure-table td {
+      font-family: 'Proxima Nova', 'Roboto', sans-serif;
     }
-
-    user-settings:after
-    {
-        content: " ";
-        display: table;
-        clear: both;
+    user-settings:after {
+      content: " ";
+      display: table;
+      clear: both;
     }
-
-    .settings-pane .warning-section[class]
-    {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        margin-top: -1px;
-        margin-left: -1px;
-        margin-right: -1px;
-        z-index: 1;
+    .settings-pane .warning-section[class] {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      margin-top: -1px;
+      margin-left: -1px;
+      margin-right: -1px;
+      z-index: 1;
     }
-
     .cms-layout .cms-pane, .cms-layout .settings-pane,
-    .settings-layout-right .settings-pane
-    {
-        overflow: visible;
+    .settings-layout-right .settings-pane {
+      overflow: visible;
     }
-
-    user-billing
-    {
-        margin-left: 1px;
-        margin-right: 1px;
+    user-billing {
+      margin-left: 1px;
+      margin-right: 1px;
     }
 }
