@@ -1,3 +1,10 @@
+/* ==UserStyle==
+@name           Floatplane Deep Dark
+@namespace      floatplane.com
+@version        1.5
+@description    A dark theme built specifically for the new react frontend for the Floatplane web app.
+@author         Ulincsys, Alan Hardman
+==/UserStyle== */
 @-moz-document domain("floatplane.com") {
   :root {
       --color-bg: black;
@@ -68,7 +75,7 @@
       background-color: var(--color-hover);
   }
   
-  #page-wrapper .route-wrapper {
+  browse-creators .route-wrapper {
       display: flex;
       justify-content: center;
   }
